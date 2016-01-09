@@ -18,7 +18,7 @@
     },
     "lp": {
       "defaultLang": "en",
-      "langFallback": true
+      "fallbackLang": true
     }
   }
 }

@@ -1,7 +1,7 @@
-// Browser loader that will load lang module as function that returns Promise
+// Browser loader that will load !lp module as function that returns Promise
 var getWindowLoader = function(name, address, load){
   return `
-    /** @hot-reload deps **/
+    /** @hot-deps **/
     module.exports = function(lang){
       if (typeof lang !== 'string'){
         console.warn('[steal-lp] illegal lang value for module ${name}:', lang)
@@ -14,6 +14,8 @@ var getWindowLoader = function(name, address, load){
         if (System._traceData.parentMap){
           System._traceData.parentMap[moduleName] = {}
           System._traceData.parentMap[moduleName]['${load.name}'] = true
+          var loads = (System.loads || System._traceData.loads)
+          loads && loads[moduleName] && (loads[moduleName].hotDeps = true)
         }
       })
       return loaded
@@ -21,7 +23,8 @@ var getWindowLoader = function(name, address, load){
     `
 }
 
-// Node loader
+// Node loader that will load !lp module as function that returns Promise
+// it uses defaultLang and fallbackLang options from System.lp config
 var getNodeLoader = function(name, address, load){
   var fs = require('fs')
   var langs = fs.readdirSync(address).map((f) => f.split('.')[0])
@@ -31,7 +34,7 @@ var getNodeLoader = function(name, address, load){
   )
   var lpConfig = System.lp || {},
     defaultLang = lpConfig.defaultLang || '',
-    fallback = !!lpConfig.langFallback
+    fallback = !!lpConfig.fallbackLang
 
   langs = langs.map((lang) => '"' + lang + '"').join()
 
@@ -77,7 +80,7 @@ loader.fetch = function(load) {
         `
     } else {
       // for browser return empty plugin, with hot-reload support
-      return '/** @hot-reload deps **/'
+      return '/** @hot-deps **/'
     }
   } else {
     return oldFetch.call(this, load)

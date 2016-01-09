@@ -1,11 +1,23 @@
 {
   "name": "steal-lp",
-  "version": "1.0.0",
-  "description": "Language packs for StealJS applicaitons",
+  "version": "0.0.1",
+  "description": "Language packs for StealJS applicaitons.",
   "main": "lp.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "files": [
+    "test-app",
+    "lp.js",
+    "README.md",
+    "package.json"
+  ],
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/whitecolor/steal-lp.git"
   },
+  "bugs": {
+    "url": "https://github.com/whitecolor/steal-lp/issues"
+  },
+  "homepage": "https://github.com/whitecolor/steal-lp",
   "author": "whitecolor",
   "license": "ISC",
   "devDependencies": {
