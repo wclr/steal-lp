@@ -1,0 +1,15 @@
+{
+  "name": "steal-lp",
+  "version": "1.0.0",
+  "description": "Language packs for StealJS applicaitons",
+  "main": "lp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "whitecolor",
+  "license": "ISC",
+  "devDependencies": {
+    "steal": "^0.13.0",
+    "steal-tools": "^0.13.2"
+  }
+}
