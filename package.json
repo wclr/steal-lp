@@ -1,7 +1,8 @@
 {
   "name": "steal-lp",
   "version": "0.0.1",
-  "description": "Language packs for StealJS applicaitons.",
+  "description": "L-packs for StealJS apps.",
+  "keywords": ["stealjs", "steal", "systemjs", "system", "loader", "modules", "language", "labels"],
   "main": "lp.js",
   "files": [
     "test-app",

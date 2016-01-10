@@ -17,8 +17,8 @@
       "./lp": "../lp.js"
     },
     "lp": {
-      "defaultLang": "en",
-      "fallbackLang": true
+      "default": "en",
+      "fallback": true
     }
   }
 }
