@@ -1,17 +1,17 @@
 var dict = require('./dict!lp')
+require('./style.css!')
 
-console.log(`module1 (CJS with ES6) loaded`)
+console.log(`module (CJS with ES6) loaded`)
 
-window.changeLanguageM1 = function(val){
+window.changeLanguageM1 = function (val) {
   val && dict(val).then((dict) => {
     document.getElementById('m1-name').innerHTML = dict.name
   })
-
 }
 
-module.exports = function(){
-
+module.exports = function () {
   var div = document.createElement('div')
+  div.setAttribute('class', 'module1')
 
   div.innerHTML = `
   <div>module1 <b>name</b> (choose language):</div>

@@ -1,3 +1,3 @@
 module.exports = {
-    age: 'edad'
+  name: 'имя'
 }

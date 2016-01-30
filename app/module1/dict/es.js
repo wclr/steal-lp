@@ -1,3 +1,3 @@
 module.exports = {
-    name: 'имя'
+  name: 'nombre'
 }

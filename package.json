@@ -1,16 +1,20 @@
 {
   "name": "steal-lp",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "L-packs for StealJS apps.",
   "keywords": ["stealjs", "steal", "systemjs", "system", "loader", "modules", "language", "labels"],
   "main": "lp.js",
   "files": [
-    "test-app",
-    "lp.js",
-    "README.md",
-    "package.json"
+    "app",
+    "index.html",
+    "index.dist.html",
+    "lp.js"
   ],
-  "scripts": {},
+  "scripts": {
+    "test": "standard",
+    "app": "watchalive",
+    "build": "rm -rf dist && steal-tools build --config package.json --main app/app --no-minify --bundle-steal"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/whitecolor/steal-lp.git"
@@ -23,6 +27,26 @@
   "license": "ISC",
   "devDependencies": {
     "steal": "^0.13.0",
-    "steal-tools": "^0.13.2"
+    "steal-tools": "^0.13.3",
+    "watchalive": "^1.1.2"
+  },
+  "system": {
+    "transpiler": "babel",
+    "babelOptions": {
+      "blacklist": []
+    },
+    "paths": {
+      "./lp": "../lp.js"
+    },
+    "npmIgnore": ["watchalive"],
+    "lp": {
+      "default": "en",
+      "fallback": true
+    }
+  },
+  "watchalive": {
+    "route": {
+      "/dist": "index.dist.html"
+    }
   }
 }

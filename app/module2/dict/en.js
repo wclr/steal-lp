@@ -1,3 +1,3 @@
 module.exports = {
-    age: 'age'
+  age: 'age'
 }
