@@ -4,6 +4,8 @@ L is for Language, Locale, Label, Lemming, Lenin, etc...
 
 Loads L-dictionary as function that takes L-name and returns promise to fulfil with dictionary data.
 
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+
 ##When you need this
 
 Well for example if your project needs **i18n, l10n** and you want to have simple, flexible and frictionless 
