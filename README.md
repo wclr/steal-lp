@@ -1,14 +1,22 @@
-#L-packs for StealJS apps.
+#Steal-LP.
 
-L is for Language, Locale, Label, Lemming, Lenin, etc... 
-
-Loads L-dictionary as function that takes L-name and returns promise to fulfil with dictionary data.
+Frictionless *language packs* for apps loaded and built with [StealJS](https://github.com/stealjs/steal)  
+L actually may stand for Language, Locale, Label, Lemming, Lenin, etc... 
 
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
+##What it does
+
+[StealJS](https://github.com/stealjs/steal) is a great loader on top of [System.js](https://github.com/systemjs/systemjs)
+that allows you to load ES6/CJS/AMD modules right inside your browser while working with NPM packages too, as well it has 
+nice **build tools** that bundle you app *for production use*.
+
+**Steal-LP** allows you to tunes loading and usage of dictionaries for your app. It loads your L-dictionary 
+as function that takes L-name and returns promise to fulfil with dictionary data.
+
 ##When you need this
 
-Well for example if your project needs **i18n, l10n** and you want to have simple, flexible and frictionless 
+Well, for example if your project needs **i18n, l10n** and you want to have simple, flexible and frictionless 
 language packs configuration and **loading on demand at runtime** as in development and production.
 Other use cases possible if you have some message/labels/entries dictionaries and you need to load them dynamically.  
 
@@ -29,6 +37,8 @@ module.exports = {
   name: 'nombre'
 }
 ```
+
+*other formats of storing dictionaries may be added pretty easy*
 
 Plain use in code:
 ```javascript
@@ -58,9 +68,9 @@ So particular language bundle loads in production when it is only needed.
  
 ```bash
 git clone http://github.com/whitecolor/steal-lp
-npm install
+npm install # please, use NPM 3, otherwice remove system.npmAlgorithm in package.json
 npm build
-npm app (or on other port than 7000: npm run app -- --port 9876)
+npm start # app will run on 7000, to use other port: npm run app -- --port 9876
 ```
 Open in your browser `http://localhost:7000`
 And you will see demo app.

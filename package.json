@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "test": "standard",
-    "app": "watchalive",
+    "start": "watchalive",
     "build": "rm -rf dist && steal-tools build --config package.json --main app/app --no-minify --bundle-steal"
   },
   "repository": {
