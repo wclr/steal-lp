@@ -1,6 +1,6 @@
 {
   "name": "steal-lp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "L-packs for StealJS apps.",
   "keywords": ["stealjs", "steal", "systemjs", "system", "loader", "modules", "language", "labels"],
   "main": "lp.js",
@@ -35,14 +35,7 @@
     "babelOptions": {
       "blacklist": []
     },
-    "paths": {
-      "./lp": "../lp.js"
-    },
-    "npmIgnore": ["watchalive"],
-    "lp": {
-      "default": "en",
-      "fallback": true
-    }
+    "npmIgnore": ["watchalive"]
   },
   "watchalive": {
     "route": {

@@ -70,7 +70,7 @@ So particular language bundle loads in production when it is only needed.
 git clone http://github.com/whitecolor/steal-lp
 npm install # please, use NPM 3, otherwice remove system.npmAlgorithm in package.json
 npm build
-npm start # app will run on 7000, to use other port: npm run app -- --port 9876
+npm start # app will run on 7000, to use other port: npm run start -- --port your_port
 ```
 Open in your browser `http://localhost:7000`
 And you will see demo app.
